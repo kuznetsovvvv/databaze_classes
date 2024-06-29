@@ -23,48 +23,48 @@ employees::employees(std::string name, int age, string pol, double experience, i
 
     void employees::edit_data() {
         std::string tmp = "";
-        cout << "×òî õîòèòå èçìåíèòü? (Name, Age, Pol, Experience, Salary, Hoursweek)" << endl;
+        cout << "Ð§Ñ‚Ð¾ Ñ…Ð¾Ñ‚Ð¸Ñ‚Ðµ Ð¸Ð·Ð¼ÐµÐ½Ð¸Ñ‚ÑŒ? (Name, Age, Pol, Experience, Salary, Hoursweek)" << endl;
         cin >> tmp;
 
         if (tmp == "Name" || tmp == "name") {
-            cout << "Ââåäèòå íîâîå èìÿ: ";
+            cout << "Ã‚Ã¢Ã¥Ã¤Ã¨Ã²Ã¥ Ã­Ã®Ã¢Ã®Ã¥ Ã¨Ã¬Ã¿: ";
             cin >> name;
-            cout << "Äàííûå ñîòðóäíèêà îáíîâëåíû!\n";
+            cout << "Ã„Ã Ã­Ã­Ã»Ã¥ Ã±Ã®Ã²Ã°Ã³Ã¤Ã­Ã¨ÃªÃ  Ã®Ã¡Ã­Ã®Ã¢Ã«Ã¥Ã­Ã»!\n";
         }
         else if (tmp == "Age" || tmp == "age") {
-            cout << "Ââåäèòå íîâûé âîçðàñò: ";
+            cout << "Ã‚Ã¢Ã¥Ã¤Ã¨Ã²Ã¥ Ã­Ã®Ã¢Ã»Ã© Ã¢Ã®Ã§Ã°Ã Ã±Ã²: ";
             cin >> age;
-            cout << "Äàííûå ñîòðóäíèêà îáíîâëåíû!\n";
+            cout << "Ã„Ã Ã­Ã­Ã»Ã¥ Ã±Ã®Ã²Ã°Ã³Ã¤Ã­Ã¨ÃªÃ  Ã®Ã¡Ã­Ã®Ã¢Ã«Ã¥Ã­Ã»!\n";
         }
         else if (tmp == "Pol" || tmp == "pol") {
-            cout << "Ââåäèòå íîâûé ïîë: ";
+            cout << "Ã‚Ã¢Ã¥Ã¤Ã¨Ã²Ã¥ Ã­Ã®Ã¢Ã»Ã© Ã¯Ã®Ã«: ";
             cin >> pol;
-            cout << "Äàííûå ñîòðóäíèêà îáíîâëåíû!\n";
+            cout << "Ã„Ã Ã­Ã­Ã»Ã¥ Ã±Ã®Ã²Ã°Ã³Ã¤Ã­Ã¨ÃªÃ  Ã®Ã¡Ã­Ã®Ã¢Ã«Ã¥Ã­Ã»!\n";
         }
         else if (tmp == "Experience" || tmp == "experience") {
-            cout << "Ââåäèòå íîâûé ñòàæ: ";
+            cout << "Ã‚Ã¢Ã¥Ã¤Ã¨Ã²Ã¥ Ã­Ã®Ã¢Ã»Ã© Ã±Ã²Ã Ã¦: ";
             cin >> experience;
-            cout << "Äàííûå ñîòðóäíèêà îáíîâëåíû!\n";
+            cout << "Ã„Ã Ã­Ã­Ã»Ã¥ Ã±Ã®Ã²Ã°Ã³Ã¤Ã­Ã¨ÃªÃ  Ã®Ã¡Ã­Ã®Ã¢Ã«Ã¥Ã­Ã»!\n";
         }
         else if (tmp == "Salary" || tmp == "salary") {
-            cout << "Ââåäèòå íîâóþ çàðïëàòó: ";
+            cout << "Ã‚Ã¢Ã¥Ã¤Ã¨Ã²Ã¥ Ã­Ã®Ã¢Ã³Ã¾ Ã§Ã Ã°Ã¯Ã«Ã Ã²Ã³: ";
             cin >> salary;
-            cout << "Äàííûå ñîòðóäíèêà îáíîâëåíû!\n";
+            cout << "Ã„Ã Ã­Ã­Ã»Ã¥ Ã±Ã®Ã²Ã°Ã³Ã¤Ã­Ã¨ÃªÃ  Ã®Ã¡Ã­Ã®Ã¢Ã«Ã¥Ã­Ã»!\n";
         }
         else if (tmp == "Hoursweek" || tmp == "hoursweek") {
-            cout << "Ââåäèòå íîâîå êîëè÷åñòâî ÷àñîâ â íåäåëþ: ";
+            cout << "Ã‚Ã¢Ã¥Ã¤Ã¨Ã²Ã¥ Ã­Ã®Ã¢Ã®Ã¥ ÃªÃ®Ã«Ã¨Ã·Ã¥Ã±Ã²Ã¢Ã® Ã·Ã Ã±Ã®Ã¢ Ã¢ Ã­Ã¥Ã¤Ã¥Ã«Ã¾: ";
             cin >> hoursweek;
-            cout << "Äàííûå ñîòðóäíèêà îáíîâëåíû!\n";
+            cout << "Ã„Ã Ã­Ã­Ã»Ã¥ Ã±Ã®Ã²Ã°Ã³Ã¤Ã­Ã¨ÃªÃ  Ã®Ã¡Ã­Ã®Ã¢Ã«Ã¥Ã­Ã»!\n";
         }
         else {
-            cout << "Âû ââåëè íåâåðíûå äàííûå, êîòîðûå íå îáíîâëåíû ó ñîòðóäíèêà!\n";
+            cout << "Ã‚Ã» Ã¢Ã¢Ã¥Ã«Ã¨ Ã­Ã¥Ã¢Ã¥Ã°Ã­Ã»Ã¥ Ã¤Ã Ã­Ã­Ã»Ã¥, ÃªÃ®Ã²Ã®Ã°Ã»Ã¥ Ã­Ã¥ Ã®Ã¡Ã­Ã®Ã¢Ã«Ã¥Ã­Ã» Ã³ Ã±Ã®Ã²Ã°Ã³Ã¤Ã­Ã¨ÃªÃ !\n";
         }
     }
 
     void employees::addemployee(std::set<employees>& employees_list) {
         string tmp5="";
         int employee_count = 0;
-        cout << "Ââåäèòå, ñêîëüêî ñîòðóäíèêîâ âû õîòèòå äîáàâèòü? ";
+        cout << "Ã‚Ã¢Ã¥Ã¤Ã¨Ã²Ã¥, Ã±ÃªÃ®Ã«Ã¼ÃªÃ® Ã±Ã®Ã²Ã°Ã³Ã¤Ã­Ã¨ÃªÃ®Ã¢ Ã¢Ã» ÃµÃ®Ã²Ã¨Ã²Ã¥ Ã¤Ã®Ã¡Ã Ã¢Ã¨Ã²Ã¼? ";
         cin >> tmp5;
         if (all_of(tmp5.begin(), tmp5.end(), ::isdigit)) {
             employee_count = stoi(tmp5);
@@ -76,80 +76,80 @@ employees::employees(std::string name, int age, string pol, double experience, i
                 
                 string tmp1 = "", tmp2 = "", tmp3 = "", tmp4 = "";
 
-                cout << "Ââåäèòå èìÿ ñîòðóäíèêà: " << i + 1 << ": ";
+                cout << "Ã‚Ã¢Ã¥Ã¤Ã¨Ã²Ã¥ Ã¨Ã¬Ã¿ Ã±Ã®Ã²Ã°Ã³Ã¤Ã­Ã¨ÃªÃ : " << i + 1 << ": ";
                 if (i > 0) {
                     cin.ignore();
                 }
                 getline(cin, name);
                 do {
                     
-                    cout << "Ââåäèòå âîçðàñò ñîòðóäíèêà: ";
+                    cout << "Ã‚Ã¢Ã¥Ã¤Ã¨Ã²Ã¥ Ã¢Ã®Ã§Ã°Ã Ã±Ã² Ã±Ã®Ã²Ã°Ã³Ã¤Ã­Ã¨ÃªÃ : ";
                     cin >> tmp1;
                     if (all_of(tmp1.begin(), tmp1.end(), ::isdigit)) {
                         age = stoi(tmp1);
                         if (age <= 15 || age >= 120) {
-                            cout << "Âîçðàñò íåâîçìîæåí! Ïîæàëóéñòà, ââåäèòå âîçðàñò îò 16 äî 119" << endl;
+                            cout << "Ã‚Ã®Ã§Ã°Ã Ã±Ã² Ã­Ã¥Ã¢Ã®Ã§Ã¬Ã®Ã¦Ã¥Ã­! ÃÃ®Ã¦Ã Ã«Ã³Ã©Ã±Ã²Ã , Ã¢Ã¢Ã¥Ã¤Ã¨Ã²Ã¥ Ã¢Ã®Ã§Ã°Ã Ã±Ã² Ã®Ã² 16 Ã¤Ã® 119" << endl;
 
                         }
                     }
                     else {
-                        cout << "Âîçðàñò òàêèì áûòü íå ìîæåò, ââåäèòå êîððåêòíî!\n";
+                        cout << "Ã‚Ã®Ã§Ã°Ã Ã±Ã² Ã²Ã ÃªÃ¨Ã¬ Ã¡Ã»Ã²Ã¼ Ã­Ã¥ Ã¬Ã®Ã¦Ã¥Ã², Ã¢Ã¢Ã¥Ã¤Ã¨Ã²Ã¥ ÃªÃ®Ã°Ã°Ã¥ÃªÃ²Ã­Ã®!\n";
                     } 
                 } while (age <= 15 || age >= 120);
 
-                cout << "Ââåäèòå ïîë ñîòðóäíèêà(m/j): ";
+                cout << "Ã‚Ã¢Ã¥Ã¤Ã¨Ã²Ã¥ Ã¯Ã®Ã« Ã±Ã®Ã²Ã°Ã³Ã¤Ã­Ã¨ÃªÃ (m/j): ";
                 cin >> pol;
 
 
                 do {
-                    cout << "Ââåäèòå ñòàæ(îïûò) ñîòðóäíèêà: ";
+                    cout << "Ã‚Ã¢Ã¥Ã¤Ã¨Ã²Ã¥ Ã±Ã²Ã Ã¦(Ã®Ã¯Ã»Ã²) Ã±Ã®Ã²Ã°Ã³Ã¤Ã­Ã¨ÃªÃ : ";
                     cin >> tmp2;
                     if (all_of(tmp2.begin(), tmp2.end(), ::isdigit)) {
                         experience = stoi(tmp2);
                         if (experience <= 0 || experience >= 80) {
-                            cout << "Ñòàæ(îïûò) òàêèì áûòü íå ìîæåò!" << endl;
+                            cout << "Ã‘Ã²Ã Ã¦(Ã®Ã¯Ã»Ã²) Ã²Ã ÃªÃ¨Ã¬ Ã¡Ã»Ã²Ã¼ Ã­Ã¥ Ã¬Ã®Ã¦Ã¥Ã²!" << endl;
                         }
                     }
                     else {
-                        cout << "Îïûò òàêèì áûòü íå ìîæåò, ââåäèòå êîððåêòíî!\n";
+                        cout << "ÃŽÃ¯Ã»Ã² Ã²Ã ÃªÃ¨Ã¬ Ã¡Ã»Ã²Ã¼ Ã­Ã¥ Ã¬Ã®Ã¦Ã¥Ã², Ã¢Ã¢Ã¥Ã¤Ã¨Ã²Ã¥ ÃªÃ®Ã°Ã°Ã¥ÃªÃ²Ã­Ã®!\n";
                     }
                 } while (experience <= 0 || experience >= 80);
 
                 do {
 
-                    cout << "Ââåäèòå çàðïëàòó ñîòðóäíèêà: ";
+                    cout << "Ã‚Ã¢Ã¥Ã¤Ã¨Ã²Ã¥ Ã§Ã Ã°Ã¯Ã«Ã Ã²Ã³ Ã±Ã®Ã²Ã°Ã³Ã¤Ã­Ã¨ÃªÃ : ";
                     cin >> tmp3;
                     if (all_of(tmp3.begin(), tmp3.end(), ::isdigit)) {
                         salary = stoi(tmp3);
                         if (salary <= 0 || salary >= 4000000) {
-                            cout << "Çàðïëàòà òàêîé áûòü íå ìîæåò!" << endl;
+                            cout << "Ã‡Ã Ã°Ã¯Ã«Ã Ã²Ã  Ã²Ã ÃªÃ®Ã© Ã¡Ã»Ã²Ã¼ Ã­Ã¥ Ã¬Ã®Ã¦Ã¥Ã²!" << endl;
                         }
                     }
                     else {
-                        cout << "Çàðïëàòà òàêîé áûòü íå ìîæåò, ââåäèòå êîððåêòíî!\n";
+                        cout << "Ã‡Ã Ã°Ã¯Ã«Ã Ã²Ã  Ã²Ã ÃªÃ®Ã© Ã¡Ã»Ã²Ã¼ Ã­Ã¥ Ã¬Ã®Ã¦Ã¥Ã², Ã¢Ã¢Ã¥Ã¤Ã¨Ã²Ã¥ ÃªÃ®Ã°Ã°Ã¥ÃªÃ²Ã­Ã®!\n";
                     } 
                 } while (salary <= 0 || salary >= 4000000);
 
                 do {
-                    cout << "Ââåäèòå ÷àñû ðàáîòû â íåäåëþ ñîòðóäíèêà: ";
+                    cout << "Ã‚Ã¢Ã¥Ã¤Ã¨Ã²Ã¥ Ã·Ã Ã±Ã» Ã°Ã Ã¡Ã®Ã²Ã» Ã¢ Ã­Ã¥Ã¤Ã¥Ã«Ã¾ Ã±Ã®Ã²Ã°Ã³Ã¤Ã­Ã¨ÃªÃ : ";
                     cin >> tmp4;
                     if (all_of(tmp4.begin(), tmp4.end(), ::isdigit)) {
                         hoursweek = stoi(tmp4);
                         if (hoursweek > 40) {
-                            cout << "×åëîâåê íå ìîæåò ðàáîòàòü áîëåå 40 ÷àñîâ â íåäåëþ ïî çàêîíó!" << endl;
+                            cout << "Ã—Ã¥Ã«Ã®Ã¢Ã¥Ãª Ã­Ã¥ Ã¬Ã®Ã¦Ã¥Ã² Ã°Ã Ã¡Ã®Ã²Ã Ã²Ã¼ Ã¡Ã®Ã«Ã¥Ã¥ 40 Ã·Ã Ã±Ã®Ã¢ Ã¢ Ã­Ã¥Ã¤Ã¥Ã«Ã¾ Ã¯Ã® Ã§Ã ÃªÃ®Ã­Ã³!" << endl;
                         }
                     }
                     else {
-                        cout << "Ââîäèòå ÷àñû ðàáîòû êîððåêòíî!\n";
+                        cout << "Ã‚Ã¢Ã®Ã¤Ã¨Ã²Ã¥ Ã·Ã Ã±Ã» Ã°Ã Ã¡Ã®Ã²Ã» ÃªÃ®Ã°Ã°Ã¥ÃªÃ²Ã­Ã®!\n";
                     } 
                 } while (hoursweek <= 0 || hoursweek > 40);
                 employees new_employee(name, age, pol, experience, salary, hoursweek);
                 employees_list.insert(new_employee);
             }
-            cout << "Ñîòðóäíèêè äîáàâëåíû!\n";
+            cout << "Ã‘Ã®Ã²Ã°Ã³Ã¤Ã­Ã¨ÃªÃ¨ Ã¤Ã®Ã¡Ã Ã¢Ã«Ã¥Ã­Ã»!\n";
         }
         else {
-            cout << "Ââåäèòå êîððåêòíîå ÷èñëî!\n";
+            cout << "Ã‚Ã¢Ã¥Ã¤Ã¨Ã²Ã¥ ÃªÃ®Ã°Ã°Ã¥ÃªÃ²Ã­Ã®Ã¥ Ã·Ã¨Ã±Ã«Ã®!\n";
         }
     }
 
@@ -159,34 +159,33 @@ employees::employees(std::string name, int age, string pol, double experience, i
         try {
             if (!employees_set.empty()) {
 
-                cout << "Ââåäèòå íîìåð ñîòðóäíèêà äëÿ óäàëåíèÿ: ";
+                cout << "Ã‚Ã¢Ã¥Ã¤Ã¨Ã²Ã¥ Ã­Ã®Ã¬Ã¥Ã° Ã±Ã®Ã²Ã°Ã³Ã¤Ã­Ã¨ÃªÃ  Ã¤Ã«Ã¿ Ã³Ã¤Ã Ã«Ã¥Ã­Ã¨Ã¿: ";
                 int index;
                 cin >> index;
                 if (index >= 1 && index <= employees_set.size()) {
                     auto it = employees_set.begin();
-                    std::advance(it, index - 1); // Ïåðåìåùàåì èòåðàòîð íà íóæíóþ ïîçèöèþ
-                    employees_set.erase(it); // Óäàëÿåì ñîòðóäíèêà èç set
-                    std::cout << "Ñîòðóäíèê ¹" << index << " óäàëåí!\n";
+                    std::advance(it, index - 1); // ÃÃ¥Ã°Ã¥Ã¬Ã¥Ã¹Ã Ã¥Ã¬ Ã¨Ã²Ã¥Ã°Ã Ã²Ã®Ã° Ã­Ã  Ã­Ã³Ã¦Ã­Ã³Ã¾ Ã¯Ã®Ã§Ã¨Ã¶Ã¨Ã¾
+                    employees_set.erase(it); // Ã“Ã¤Ã Ã«Ã¿Ã¥Ã¬ Ã±Ã®Ã²Ã°Ã³Ã¤Ã­Ã¨ÃªÃ  Ã¨Ã§ set
+                    std::cout << "Ã‘Ã®Ã²Ã°Ã³Ã¤Ã­Ã¨Ãª Â¹" << index << " Ã³Ã¤Ã Ã«Ã¥Ã­!\n";
                 }
                 else {
-                    throw std::out_of_range("Íåâåðíûé íîìåð ñîòðóäíèêà! Äîïóñòèìûé äèàïàçîí: 1-" + std::to_string(employees_set.size()));
+                    throw std::out_of_range("ÃÃ¥Ã¢Ã¥Ã°Ã­Ã»Ã© Ã­Ã®Ã¬Ã¥Ã° Ã±Ã®Ã²Ã°Ã³Ã¤Ã­Ã¨ÃªÃ ! Ã„Ã®Ã¯Ã³Ã±Ã²Ã¨Ã¬Ã»Ã© Ã¤Ã¨Ã Ã¯Ã Ã§Ã®Ã­: 1-" + std::to_string(employees_set.size()));
                 }
             }
             else {
-                throw std::runtime_error("Ñïèñîê ñîòðóäíèêîâ ïóñò!");
+                throw std::runtime_error("Ã‘Ã¯Ã¨Ã±Ã®Ãª Ã±Ã®Ã²Ã°Ã³Ã¤Ã­Ã¨ÃªÃ®Ã¢ Ã¯Ã³Ã±Ã²!");
             }
         }
         catch (const std::out_of_range& e) {
-            std::cerr << "Îøèáêà: " << e.what() << std::endl;
+            std::cerr << "ÃŽÃ¸Ã¨Ã¡ÃªÃ : " << e.what() << std::endl;
         }
         catch (const std::runtime_error& e) {
-            std::cerr << "Îøèáêà: " << e.what() << std::endl;
+            std::cerr << "ÃŽÃ¸Ã¨Ã¡ÃªÃ : " << e.what() << std::endl;
         }
     }
 
 
     void employees::print() const {
-        SetConsoleTextAttribute(hConsole, 14);
         cout << "Name: " << this->name << endl;
         cout << "Age: " << this->age << endl;
         cout << "Pol: " << this->pol << endl;
@@ -194,6 +193,5 @@ employees::employees(std::string name, int age, string pol, double experience, i
         cout << "Salary: " << this->salary << endl;
         cout << "Hoursweek: " << this->hoursweek << endl;
         cout << endl;
-        SetConsoleTextAttribute(hConsole, 7);
     }
  

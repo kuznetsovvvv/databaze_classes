@@ -11,7 +11,7 @@ structual_divisions::structual_divisions(const string& name, const string& head,
      int division_count = 0;
      cout << "Сколько подразделений вы хотите добавить? ";
      cin >> division_count;
-     cin.ignore(); // Игнорируем оставшийся символ новой строки
+     cin.ignore(); 
 
      for (int i = 0; i < division_count; ++i) {
          string name, head;
@@ -63,9 +63,7 @@ structual_divisions::structual_divisions(const string& name, const string& head,
 
 
                  for (const auto& division : divisions_set) {
-                     SetConsoleTextAttribute(hConsole, 14);
                      cout << division.department_name << ": " << division.number_of_employees << " сотрудникoв(а)\n";
-                     SetConsoleTextAttribute(hConsole, 7);
                  }
              }
              else {
@@ -112,7 +110,6 @@ structual_divisions::structual_divisions(const string& name, const string& head,
 
 
     void structual_divisions::print() const {
-        SetConsoleTextAttribute(hConsole, 14);
         cout << "Название: " << department_name << endl;
         cout << "Руководитель: " << department_head << endl;
         cout << "Количество сотрудников: " << number_of_employees << endl;
@@ -123,7 +120,6 @@ structual_divisions::structual_divisions(const string& name, const string& head,
             }
             cout << endl;
         }
-        SetConsoleTextAttribute(hConsole, 7);
     }
 
      void structual_divisions::print_divisions(const set<structual_divisions>& divisions_set) {

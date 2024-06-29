@@ -2,15 +2,12 @@
 #include<set>
 #include <iostream>
 #include<string>
-#include<Windows.h>
-#include<conio.h>
 #include<stdio.h>
 #include<vector>
 #include <algorithm>
 #include <sstream>
 #include <cctype>
-#include <windows.h> // для HANDLE 
-extern HANDLE hConsole;
+
 using namespace std;
 class structual_divisions {
     string department_name;

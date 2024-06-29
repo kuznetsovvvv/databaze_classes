@@ -1,0 +1,3 @@
+/home/misha/dev/first-databaze/build/CMakeFiles/dz2_2sem.dir
+/home/misha/dev/first-databaze/build/CMakeFiles/edit_cache.dir
+/home/misha/dev/first-databaze/build/CMakeFiles/rebuild_cache.dir

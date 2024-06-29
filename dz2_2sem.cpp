@@ -1,8 +1,6 @@
 ﻿#include<set>
 #include <iostream>
 #include<string>
-#include<Windows.h>
-#include<conio.h>
 #include<stdio.h>
 #include<vector>
 #include"structual_divisions.h"
@@ -11,17 +9,16 @@
 #include <algorithm>
 #include <sstream>
 #include <cctype>
+#include <limits>
 #ifdef max
 #undef max
 #endif
 using namespace std;
-HANDLE hConsole;
 void menu();
 
 int main()
 {
     setlocale(LC_ALL, "RU");
-    hConsole = GetStdHandle(STD_OUTPUT_HANDLE);
     std::set<employees> employees_set;
     std::set<structual_divisions> divisions_set;
 
@@ -34,9 +31,7 @@ int main()
     }
     else {
         cout << "Files are open!" << endl;
-        SetConsoleTextAttribute(hConsole, 6);
         cout << "\t\t\t\t\tМеню отдела кадров организации:" << endl;
-        SetConsoleTextAttribute(hConsole, 7);
         int n = 0;
         string name, head, tmp;
         int value;
@@ -170,9 +165,7 @@ int main()
 
             }
             catch (const std::invalid_argument& e) {
-                SetConsoleTextAttribute(hConsole, 4);
                 cout << e.what() << endl;
-                SetConsoleTextAttribute(hConsole, 7);
             }
 
         }
@@ -202,7 +195,5 @@ void menu() {
     cout << "7. Вывести список сотрудников\n";
     cout << "8. Удалить сотрудника\n";
     cout << "9. Выход\n";
-    SetConsoleTextAttribute(hConsole, 6);
     cout << "действие: ";
-    SetConsoleTextAttribute(hConsole, 7);
 }

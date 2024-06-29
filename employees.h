@@ -1,13 +1,10 @@
 #pragma once
-#include<Windows.h>
-#include<conio.h>
+
 #include<stdio.h>
 #include<vector>
 #include"structual_divisions.h"
 #include"employees.h"
 using namespace std;
-#include <windows.h> // для HANDLE 
-extern HANDLE hConsole;
 class employees {
     std::string name;// имя
     int age;// возраст
