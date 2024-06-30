@@ -4,7 +4,7 @@
 # compile CXX with /usr/bin/c++
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/home/misha/dev/first-databaze
+CXX_INCLUDES = -I/home/misha/dev/first-databaze/databaze
 
 CXX_FLAGS = 
 

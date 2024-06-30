@@ -1,6 +1,7 @@
 CMakeFiles/dz2_2sem.dir/dz2_2sem.cpp.o: \
- /home/misha/dev/first-databaze/dz2_2sem.cpp /usr/include/stdc-predef.h \
- /usr/include/c++/11/set /usr/include/c++/11/bits/stl_tree.h \
+ /home/misha/dev/first-databaze/databaze/dz2_2sem.cpp \
+ /usr/include/stdc-predef.h /usr/include/c++/11/set \
+ /usr/include/c++/11/bits/stl_tree.h \
  /usr/include/c++/11/bits/stl_algobase.h \
  /usr/include/x86_64-linux-gnu/c++/11/bits/c++config.h \
  /usr/include/x86_64-linux-gnu/c++/11/bits/os_defines.h \
@@ -154,7 +155,7 @@ CMakeFiles/dz2_2sem.dir/dz2_2sem.cpp.o: \
  /usr/include/c++/11/bits/stl_vector.h \
  /usr/include/c++/11/bits/stl_bvector.h \
  /usr/include/c++/11/bits/vector.tcc \
- /home/misha/dev/first-databaze/structual_divisions.h \
+ /home/misha/dev/first-databaze/databaze/structual_divisions.h \
  /usr/include/c++/11/algorithm /usr/include/c++/11/utility \
  /usr/include/c++/11/bits/stl_relops.h \
  /usr/include/c++/11/bits/stl_algo.h \
@@ -173,8 +174,8 @@ CMakeFiles/dz2_2sem.dir/dz2_2sem.cpp.o: \
  /usr/include/c++/11/bits/unordered_map.h \
  /usr/include/c++/11/pstl/execution_defs.h /usr/include/c++/11/sstream \
  /usr/include/c++/11/bits/sstream.tcc \
- /home/misha/dev/first-databaze/employees.h /usr/include/c++/11/fstream \
- /usr/include/c++/11/bits/codecvt.h \
+ /home/misha/dev/first-databaze/databaze/employees.h \
+ /usr/include/c++/11/fstream /usr/include/c++/11/bits/codecvt.h \
  /usr/include/x86_64-linux-gnu/c++/11/bits/basic_file.h \
  /usr/include/x86_64-linux-gnu/c++/11/bits/c++io.h \
  /usr/include/c++/11/bits/fstream.tcc /usr/include/c++/11/limits
