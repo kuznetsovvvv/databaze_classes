@@ -1,0 +1,7 @@
+[Desktop Entry]
+     Name=dz2_2sem
+     Exec=./dz2_2sem 
+     Icon=dz2_2sem_icon.png  # Добавьте иконку, если хотите
+     Terminal=true        # Если нужно запускать в терминале, установите в true
+     Type=Application
+     Categories=Application;
