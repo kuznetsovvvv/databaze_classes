@@ -9,55 +9,61 @@ structual_divisions::structual_divisions(const string& name, const string& head,
 
  void structual_divisions::add_division(set<structual_divisions>& divisions_set) {
      int division_count = 0;
-     cout << "Ð¡ÐºÐ¾Ð»ÑŒÐºÐ¾ Ð¿Ð¾Ð´Ñ€Ð°Ð·Ð´ÐµÐ»ÐµÐ½Ð¸Ð¹ Ð²Ñ‹ Ñ…Ð¾Ñ‚Ð¸Ñ‚Ðµ Ð´Ð¾Ð±Ð°Ð²Ð¸Ñ‚ÑŒ? ";
+     cout << "¿¿¿¿¿¿¿ ¿¿¿¿¿¿¿¿¿¿¿¿¿ ¿¿ ¿¿¿¿¿¿ ¿¿¿¿¿¿¿¿? ";
      cin >> division_count;
-     cin.ignore();
+     cin.ignore(); 
 
      for (int i = 0; i < division_count; ++i) {
          string name, head;
          string value;
          vector<string> names;
          int number = 0;
-         cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð½Ð°Ð·Ð²Ð°Ð½Ð¸Ðµ Ð¿Ð¾Ð´Ñ€Ð°Ð·Ð´ÐµÐ»ÐµÐ½Ð¸Ñ " << i + 1 << ": ";
+         cout << "¿¿¿¿¿¿¿ ¿¿¿¿¿¿¿¿ ¿¿¿¿¿¿¿¿¿¿¿¿¿ " << i + 1 << ": ";
          getline(cin, name);
-         cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð¸Ð¼Ñ Ñ€ÑƒÐºÐ¾Ð²Ð¾Ð´Ð¸Ñ‚ÐµÐ»Ñ: ";
+         cout << "¿¿¿¿¿¿¿ ¿¿¿ ¿¿¿¿¿¿¿¿¿¿¿¿: ";
          getline(cin, head);
-         do { cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ ÐºÐ¾Ð»Ð¸Ñ‡ÐµÑÑ‚Ð²Ð¾ ÑÐ¾Ñ‚Ñ€ÑƒÐ´Ð½Ð¸ÐºÐ¾Ð²: ";
+         do {
+
+             cout << "¿¿¿¿¿¿¿ ¿¿¿¿¿¿¿¿¿¿ ¿¿¿¿¿¿¿¿¿¿¿: ";
              cin >> value;
              if (all_of(value.begin(), value.end(), ::isdigit)) {
                  number = stoi(value);
                  if (number < 0 || number>100) {
-                     cout << "ÐÐµÐ²Ð¾Ð·Ð¼Ð¾Ð¶Ð½Ð¾Ðµ ÐºÐ¾Ð»Ð¸Ñ‡ÐµÑÑ‚Ð²Ð¾ ÑÐ¾Ñ‚Ñ€ÑƒÐ´Ð½Ð¸ÐºÐ¾Ð²!\n";
+                     cout << "¿¿¿¿¿¿¿¿¿¿¿ ¿¿¿¿¿¿¿¿¿¿ ¿¿¿¿¿¿¿¿¿¿¿!\n";
                  }
              }
              else {
-                 cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ñ‡Ð¸ÑÐ»Ð¾!" << endl;
+                 cout << "¿¿¿¿¿¿¿ ¿¿¿¿¿!" << endl;
              }
          } while (number < 0 || number>100);
 
-         cin.ignore();
+         cin.ignore(); 
          names.reserve(number);
          for (int j = 0; j < number; j++) {
-             cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð¸Ð¼Ñ ÑÐ¾Ñ‚Ñ€ÑƒÐ´Ð½Ð¸ÐºÐ° " << j + 1 << ": ";
+             cout << "¿¿¿¿¿¿¿ ¿¿¿ ¿¿¿¿¿¿¿¿¿¿ " << j + 1 << ": ";
              string employee_name;
              getline(cin, employee_name);
              names.push_back(employee_name);
          }
          divisions_set.insert(structual_divisions(name, head, number, names));
      }
-     cout << "ÐŸÐ¾Ð´Ñ€Ð°Ð·Ð´ÐµÐ»ÐµÐ½Ð¸Ñ Ð´Ð¾Ð±Ð°Ð²Ð»ÐµÐ½Ñ‹!\n";
+     cout << "¿¿¿¿¿¿¿¿¿¿¿¿¿ ¿¿¿¿¿¿¿¿¿!\n";
     }
-                       void structual_divisions::print_employee_count(const set<structual_divisions>& divisions_set) {
+
+
+
+
+     void structual_divisions::print_employee_count(const set<structual_divisions>& divisions_set) {
          try {
              if (!divisions_set.empty()) {
 
 
                  for (const auto& division : divisions_set) {
-                     cout << division.department_name << ": " << division.number_of_employees << " ÑÐ¾Ñ‚Ñ€ÑƒÐ´Ð½Ð¸ÐºÐ¾Ð²(Ð°)\n";
+                     cout << division.department_name << ": " << division.number_of_employees << " ¿¿¿¿¿¿¿¿¿¿¿(¿)\n";
                  }
              }
              else {
-                 throw std::out_of_range("Ð¡Ð¿Ð¸ÑÐ¾Ðº Ð¿Ð¾Ð´Ñ€Ð°Ð·Ð´ÐµÐ»ÐµÐ½Ð¸Ð¹ Ð¿ÑƒÑÑ‚!\n");
+                 throw std::out_of_range("¿¿¿¿¿¿ ¿¿¿¿¿¿¿¿¿¿¿¿¿ ¿¿¿¿!\n");
              }
          }
          catch (const std::out_of_range& e) {
@@ -69,27 +75,29 @@ structual_divisions::structual_divisions(const string& name, const string& head,
          try {
              if (!divisions_set.empty()) {
                  int division_number;
-                 cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð½Ð¾Ð¼ÐµÑ€ Ð¿Ð¾Ð´Ñ€Ð°Ð·Ð´ÐµÐ»ÐµÐ½Ð¸Ñ Ð´Ð»Ñ ÑƒÐ´Ð°Ð»ÐµÐ½Ð¸Ñ: ";
-                 cin >> division_number; if (!(division_number < 1 || division_number > divisions_set.size())) {
+                 cout << "¿¿¿¿¿¿¿ ¿¿¿¿¿ ¿¿¿¿¿¿¿¿¿¿¿¿¿ ¿¿¿ ¿¿¿¿¿¿¿¿: ";
+                 cin >> division_number;
+
+                 if (!(division_number < 1 || division_number > divisions_set.size())) {
 
                      auto it = divisions_set.begin();
-                     advance(it, division_number - 1);
+                     advance(it, division_number - 1); 
                      divisions_set.erase(it);
-                     cout << "ÐŸÐ¾Ð´Ñ€Ð°Ð·Ð´ÐµÐ»ÐµÐ½Ð¸Ðµ â„–" << division_number << " ÑƒÐ´Ð°Ð»ÐµÐ½Ð¾.\n";
+                     cout << "¿¿¿¿¿¿¿¿¿¿¿¿¿ ¿" << division_number << " ¿¿¿¿¿¿¿.\n";
                  }
                  else
                  {
-                     throw std::invalid_argument("ÐÐµÐ²ÐµÑ€Ð½Ñ‹Ð¹ Ð½Ð¾Ð¼ÐµÑ€ Ð¿Ð¾Ð´Ñ€Ð°Ð·Ð´ÐµÐ»ÐµÐ½Ð¸Ñ!\n");
+                     throw std::invalid_argument("¿¿¿¿¿¿¿¿ ¿¿¿¿¿ ¿¿¿¿¿¿¿¿¿¿¿¿¿!\n");
                  }
 
 
              }
              else {
-                 throw std::out_of_range("Ð¡Ð¿Ð¸ÑÐ¾Ðº Ð¿Ð¾Ð´Ñ€Ð°Ð·Ð´ÐµÐ»ÐµÐ½Ð¸Ð¹ Ð¿ÑƒÑÑ‚!\n");
+                 throw std::out_of_range("¿¿¿¿¿¿ ¿¿¿¿¿¿¿¿¿¿¿¿¿ ¿¿¿¿!\n");
              }
          }
          catch (const std::out_of_range& e) {
-  cerr << e.what();
+             cerr << e.what();
          }
          catch (const std::invalid_argument& e) {
              cerr << e.what();
@@ -98,11 +106,11 @@ structual_divisions::structual_divisions(const string& name, const string& head,
 
 
     void structual_divisions::print() const {
-        cout << "ÐÐ°Ð·Ð²Ð°Ð½Ð¸Ðµ: " << department_name << endl;
-        cout << "Ð ÑƒÐºÐ¾Ð²Ð¾Ð´Ð¸Ñ‚ÐµÐ»ÑŒ: " << department_head << endl;
-        cout << "ÐšÐ¾Ð»Ð¸Ñ‡ÐµÑÑ‚Ð²Ð¾ ÑÐ¾Ñ‚Ñ€ÑƒÐ´Ð½Ð¸ÐºÐ¾Ð²: " << number_of_employees << endl;
+        cout << "¿¿¿¿¿¿¿¿: " << department_name << endl;
+        cout << "¿¿¿¿¿¿¿¿¿¿¿¿: " << department_head << endl;
+        cout << "¿¿¿¿¿¿¿¿¿¿ ¿¿¿¿¿¿¿¿¿¿¿: " << number_of_employees << endl;
         if (!employee_names.empty()) {
-            cout << "Ð¡Ð¾Ñ‚Ñ€ÑƒÐ´Ð½Ð¸ÐºÐ¸: ";
+            cout << "¿¿¿¿¿¿¿¿¿¿: ";
             for (const auto& name : employee_names) {
                 cout << name << "; ";
             }
@@ -114,15 +122,17 @@ structual_divisions::structual_divisions(const string& name, const string& head,
          try {
              if (!divisions_set.empty()) {
 
+
+
                  int i = 1;
                  for (const auto& division : divisions_set) {
-                     cout << "ÐŸÐ¾Ð´Ñ€Ð°Ð·Ð´ÐµÐ»ÐµÐ½Ð¸Ðµ â„–" << i << ":\n";
+                     cout << "¿¿¿¿¿¿¿¿¿¿¿¿¿ ¿" << i << ":\n";
                      division.print();
                      i++;
                  }
              }
              else {
-                 throw std::out_of_range("Ð¡Ð¿Ð¸ÑÐ¾Ðº Ð¿Ð¾Ð´Ñ€Ð°Ð·Ð´ÐµÐ»ÐµÐ½Ð¸Ð¹ Ð¿ÑƒÑÑ‚!\n");
+                 throw std::out_of_range("¿¿¿¿¿¿ ¿¿¿¿¿¿¿¿¿¿¿¿¿ ¿¿¿¿!\n");
              }
          }
          catch (const std::out_of_range& e) {
@@ -133,4 +143,3 @@ structual_divisions::structual_divisions(const string& name, const string& head,
     bool structual_divisions::operator<(const structual_divisions& other) const {
         return department_name < other.department_name;
     }
-

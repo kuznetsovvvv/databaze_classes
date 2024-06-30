@@ -9,55 +9,65 @@ structual_divisions::structual_divisions(const string& name, const string& head,
 
  void structual_divisions::add_division(set<structual_divisions>& divisions_set) {
      int division_count = 0;
-     cout << "РЎРєРѕР»СЊРєРѕ РїРѕРґСЂР°Р·РґРµР»РµРЅРёР№ РІС‹ С…РѕС‚РёС‚Рµ РґРѕР±Р°РІРёС‚СЊ? ";
+     cout << "Сколько подразделений вы хотите добавить? ";
      cin >> division_count;
-     cin.ignore();
+     cin.ignore(); 
 
      for (int i = 0; i < division_count; ++i) {
          string name, head;
          string value;
-         vector<string> names;
+         vector<string> names; // Используем vector
          int number = 0;
-         cout << "Р’РІРµРґРёС‚Рµ РЅР°Р·РІР°РЅРёРµ РїРѕРґСЂР°Р·РґРµР»РµРЅРёСЏ " << i + 1 << ": ";
+         cout << "Введите название подразделения " << i + 1 << ": ";
          getline(cin, name);
-         cout << "Р’РІРµРґРёС‚Рµ РёРјСЏ СЂСѓРєРѕРІРѕРґРёС‚РµР»СЏ: ";
+         cout << "Введите имя руководителя: ";
          getline(cin, head);
-         do { cout << "Р’РІРµРґРёС‚Рµ РєРѕР»РёС‡РµСЃС‚РІРѕ СЃРѕС‚СЂСѓРґРЅРёРєРѕРІ: ";
+         do {
+
+             cout << "Введите количество сотрудников: ";
              cin >> value;
              if (all_of(value.begin(), value.end(), ::isdigit)) {
                  number = stoi(value);
                  if (number < 0 || number>100) {
-                     cout << "РќРµРІРѕР·РјРѕР¶РЅРѕРµ РєРѕР»РёС‡РµСЃС‚РІРѕ СЃРѕС‚СЂСѓРґРЅРёРєРѕРІ!\n";
+                     cout << "Невозможное количество сотрудников!\n";
                  }
              }
              else {
-                 cout << "Р’РІРµРґРёС‚Рµ С‡РёСЃР»Рѕ!" << endl;
+                 cout << "Введите число!" << endl;
              }
          } while (number < 0 || number>100);
 
-         cin.ignore();
-         names.reserve(number);
+         cin.ignore(); // Игнорируем оставшийся символ новой строки
+
+         // Запрос имен сотрудников
+         names.reserve(number); // Выделяем память для эффективности
          for (int j = 0; j < number; j++) {
-             cout << "Р’РІРµРґРёС‚Рµ РёРјСЏ СЃРѕС‚СЂСѓРґРЅРёРєР° " << j + 1 << ": ";
+             cout << "Введите имя сотрудника " << j + 1 << ": ";
              string employee_name;
              getline(cin, employee_name);
              names.push_back(employee_name);
          }
+
+         // Создание объекта подразделения и добавление в set
          divisions_set.insert(structual_divisions(name, head, number, names));
      }
-     cout << "РџРѕРґСЂР°Р·РґРµР»РµРЅРёСЏ РґРѕР±Р°РІР»РµРЅС‹!\n";
+     cout << "Подразделения добавлены!\n";
     }
-                       void structual_divisions::print_employee_count(const set<structual_divisions>& divisions_set) {
+
+
+
+
+     void structual_divisions::print_employee_count(const set<structual_divisions>& divisions_set) {
          try {
              if (!divisions_set.empty()) {
 
 
                  for (const auto& division : divisions_set) {
-                     cout << division.department_name << ": " << division.number_of_employees << " СЃРѕС‚СЂСѓРґРЅРёРєРѕРІ(Р°)\n";
+                     cout << division.department_name << ": " << division.number_of_employees << " сотрудникoв(а)\n";
                  }
              }
              else {
-                 throw std::out_of_range("РЎРїРёСЃРѕРє РїРѕРґСЂР°Р·РґРµР»РµРЅРёР№ РїСѓСЃС‚!\n");
+                 throw std::out_of_range("Список подразделений пуст!\n");
              }
          }
          catch (const std::out_of_range& e) {
@@ -69,27 +79,29 @@ structual_divisions::structual_divisions(const string& name, const string& head,
          try {
              if (!divisions_set.empty()) {
                  int division_number;
-                 cout << "Р’РІРµРґРёС‚Рµ РЅРѕРјРµСЂ РїРѕРґСЂР°Р·РґРµР»РµРЅРёСЏ РґР»СЏ СѓРґР°Р»РµРЅРёСЏ: ";
-                 cin >> division_number; if (!(division_number < 1 || division_number > divisions_set.size())) {
+                 cout << "Введите номер подразделения для удаления: ";
+                 cin >> division_number;
+
+                 if (!(division_number < 1 || division_number > divisions_set.size())) {
 
                      auto it = divisions_set.begin();
-                     advance(it, division_number - 1);
+                     advance(it, division_number - 1); // Перемещаем итератор к нужному элементу
                      divisions_set.erase(it);
-                     cout << "РџРѕРґСЂР°Р·РґРµР»РµРЅРёРµ в„–" << division_number << " СѓРґР°Р»РµРЅРѕ.\n";
+                     cout << "Подразделение №" << division_number << " удалено.\n";
                  }
                  else
                  {
-                     throw std::invalid_argument("РќРµРІРµСЂРЅС‹Р№ РЅРѕРјРµСЂ РїРѕРґСЂР°Р·РґРµР»РµРЅРёСЏ!\n");
+                     throw std::invalid_argument("Неверный номер подразделения!\n");
                  }
 
 
              }
              else {
-                 throw std::out_of_range("РЎРїРёСЃРѕРє РїРѕРґСЂР°Р·РґРµР»РµРЅРёР№ РїСѓСЃС‚!\n");
+                 throw std::out_of_range("Список подразделений пуст!\n");
              }
          }
          catch (const std::out_of_range& e) {
-  cerr << e.what();
+             cerr << e.what();
          }
          catch (const std::invalid_argument& e) {
              cerr << e.what();
@@ -98,11 +110,11 @@ structual_divisions::structual_divisions(const string& name, const string& head,
 
 
     void structual_divisions::print() const {
-        cout << "РќР°Р·РІР°РЅРёРµ: " << department_name << endl;
-        cout << "Р СѓРєРѕРІРѕРґРёС‚РµР»СЊ: " << department_head << endl;
-        cout << "РљРѕР»РёС‡РµСЃС‚РІРѕ СЃРѕС‚СЂСѓРґРЅРёРєРѕРІ: " << number_of_employees << endl;
+        cout << "Название: " << department_name << endl;
+        cout << "Руководитель: " << department_head << endl;
+        cout << "Количество сотрудников: " << number_of_employees << endl;
         if (!employee_names.empty()) {
-            cout << "РЎРѕС‚СЂСѓРґРЅРёРєРё: ";
+            cout << "Сотрудники: ";
             for (const auto& name : employee_names) {
                 cout << name << "; ";
             }
@@ -114,15 +126,17 @@ structual_divisions::structual_divisions(const string& name, const string& head,
          try {
              if (!divisions_set.empty()) {
 
+
+
                  int i = 1;
                  for (const auto& division : divisions_set) {
-                     cout << "РџРѕРґСЂР°Р·РґРµР»РµРЅРёРµ в„–" << i << ":\n";
+                     cout << "Подразделение №" << i << ":\n";
                      division.print();
                      i++;
                  }
              }
              else {
-                 throw std::out_of_range("РЎРїРёСЃРѕРє РїРѕРґСЂР°Р·РґРµР»РµРЅРёР№ РїСѓСЃС‚!\n");
+                 throw std::out_of_range("Список подразделений пуст!\n");
              }
          }
          catch (const std::out_of_range& e) {
@@ -133,4 +147,3 @@ structual_divisions::structual_divisions(const string& name, const string& head,
     bool structual_divisions::operator<(const structual_divisions& other) const {
         return department_name < other.department_name;
     }
-
