@@ -5,16 +5,15 @@ on:
     branches: [ main ]
   pull_request:
     branches: [ main ]
-
-
   workflow_dispatch:
+
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
       - name: Set up CMake
-        uses: actions/setup-cmake@v2
+        uses: actions/setup-cmake@v3 # Изменено на v3
         with:
           cmake_version: latest
       - name: Configure CMake
@@ -28,4 +27,3 @@ jobs:
         run: cmake --build . --target test --config Release # Если у вас есть тесты
       - name: Run (если нужно запустить проект после сборки)
         run: ./dz2_2sem 
-
