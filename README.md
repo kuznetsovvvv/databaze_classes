@@ -7,8 +7,7 @@ Next we can keep cadastral records of all employees and departments using the th
 The programm provides opportunities to add, to print to consol or to delete employees and departments. Also one of the possibilities is to exit the program.
 ### Technologies
 I use set from STL containers to add subjects.
-
-*After adding employees and departments, they are sorted by name and department head*.
+After adding employees and departments, they are sorted by name and department head.
 |subjects  |sorting        |
 |----------|:-------------:|
 |employees |name           |
