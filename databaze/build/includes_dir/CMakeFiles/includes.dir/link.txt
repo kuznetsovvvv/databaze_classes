@@ -1,0 +1,2 @@
+/usr/bin/ar qc libincludes.a CMakeFiles/includes.dir/employees.cpp.o CMakeFiles/includes.dir/structual_divisions.cpp.o
+/usr/bin/ranlib libincludes.a

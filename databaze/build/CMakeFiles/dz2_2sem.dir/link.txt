@@ -1,1 +1,1 @@
-/usr/bin/c++ CMakeFiles/dz2_2sem.dir/dz2_2sem.cpp.o CMakeFiles/dz2_2sem.dir/employees.cpp.o CMakeFiles/dz2_2sem.dir/structual_divisions.cpp.o -o dz2_2sem 
+/usr/bin/c++ CMakeFiles/dz2_2sem.dir/dz2_2sem.cpp.o -o dz2_2sem  includes_dir/libincludes.a 

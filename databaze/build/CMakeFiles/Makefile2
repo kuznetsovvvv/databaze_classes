@@ -64,29 +64,50 @@ CMAKE_BINARY_DIR = /home/misha/dev/first-databaze/databaze/build
 
 # The main recursive "all" target.
 all: CMakeFiles/dz2_2sem.dir/all
+all: includes_dir/all
 .PHONY : all
 
 # The main recursive "preinstall" target.
-preinstall:
+preinstall: includes_dir/preinstall
 .PHONY : preinstall
 
 # The main recursive "clean" target.
 clean: CMakeFiles/dz2_2sem.dir/clean
+clean: includes_dir/clean
 .PHONY : clean
+
+#=============================================================================
+# Directory level rules for directory includes_dir
+
+# Recursive "all" directory target.
+includes_dir/all: includes_dir/CMakeFiles/includes.dir/all
+includes_dir/all: includes_dir/CMakeFiles/first_executable.dir/all
+includes_dir/all: includes_dir/CMakeFiles/second_executable.dir/all
+.PHONY : includes_dir/all
+
+# Recursive "preinstall" directory target.
+includes_dir/preinstall:
+.PHONY : includes_dir/preinstall
+
+# Recursive "clean" directory target.
+includes_dir/clean: includes_dir/CMakeFiles/includes.dir/clean
+includes_dir/clean: includes_dir/CMakeFiles/first_executable.dir/clean
+includes_dir/clean: includes_dir/CMakeFiles/second_executable.dir/clean
+.PHONY : includes_dir/clean
 
 #=============================================================================
 # Target rules for target CMakeFiles/dz2_2sem.dir
 
 # All Build rule for target.
-CMakeFiles/dz2_2sem.dir/all:
+CMakeFiles/dz2_2sem.dir/all: includes_dir/CMakeFiles/includes.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/dz2_2sem.dir/build.make CMakeFiles/dz2_2sem.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/dz2_2sem.dir/build.make CMakeFiles/dz2_2sem.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/misha/dev/first-databaze/databaze/build/CMakeFiles --progress-num=1,2,3,4 "Built target dz2_2sem"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/misha/dev/first-databaze/databaze/build/CMakeFiles --progress-num=1,2 "Built target dz2_2sem"
 .PHONY : CMakeFiles/dz2_2sem.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/dz2_2sem.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/misha/dev/first-databaze/databaze/build/CMakeFiles 4
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/misha/dev/first-databaze/databaze/build/CMakeFiles 5
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/dz2_2sem.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/misha/dev/first-databaze/databaze/build/CMakeFiles 0
 .PHONY : CMakeFiles/dz2_2sem.dir/rule
@@ -99,6 +120,84 @@ dz2_2sem: CMakeFiles/dz2_2sem.dir/rule
 CMakeFiles/dz2_2sem.dir/clean:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/dz2_2sem.dir/build.make CMakeFiles/dz2_2sem.dir/clean
 .PHONY : CMakeFiles/dz2_2sem.dir/clean
+
+#=============================================================================
+# Target rules for target includes_dir/CMakeFiles/includes.dir
+
+# All Build rule for target.
+includes_dir/CMakeFiles/includes.dir/all:
+	$(MAKE) $(MAKESILENT) -f includes_dir/CMakeFiles/includes.dir/build.make includes_dir/CMakeFiles/includes.dir/depend
+	$(MAKE) $(MAKESILENT) -f includes_dir/CMakeFiles/includes.dir/build.make includes_dir/CMakeFiles/includes.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/misha/dev/first-databaze/databaze/build/CMakeFiles --progress-num=5,6,7 "Built target includes"
+.PHONY : includes_dir/CMakeFiles/includes.dir/all
+
+# Build rule for subdir invocation for target.
+includes_dir/CMakeFiles/includes.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/misha/dev/first-databaze/databaze/build/CMakeFiles 3
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 includes_dir/CMakeFiles/includes.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/misha/dev/first-databaze/databaze/build/CMakeFiles 0
+.PHONY : includes_dir/CMakeFiles/includes.dir/rule
+
+# Convenience name for target.
+includes: includes_dir/CMakeFiles/includes.dir/rule
+.PHONY : includes
+
+# clean rule for target.
+includes_dir/CMakeFiles/includes.dir/clean:
+	$(MAKE) $(MAKESILENT) -f includes_dir/CMakeFiles/includes.dir/build.make includes_dir/CMakeFiles/includes.dir/clean
+.PHONY : includes_dir/CMakeFiles/includes.dir/clean
+
+#=============================================================================
+# Target rules for target includes_dir/CMakeFiles/first_executable.dir
+
+# All Build rule for target.
+includes_dir/CMakeFiles/first_executable.dir/all: includes_dir/CMakeFiles/includes.dir/all
+	$(MAKE) $(MAKESILENT) -f includes_dir/CMakeFiles/first_executable.dir/build.make includes_dir/CMakeFiles/first_executable.dir/depend
+	$(MAKE) $(MAKESILENT) -f includes_dir/CMakeFiles/first_executable.dir/build.make includes_dir/CMakeFiles/first_executable.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/misha/dev/first-databaze/databaze/build/CMakeFiles --progress-num=3,4 "Built target first_executable"
+.PHONY : includes_dir/CMakeFiles/first_executable.dir/all
+
+# Build rule for subdir invocation for target.
+includes_dir/CMakeFiles/first_executable.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/misha/dev/first-databaze/databaze/build/CMakeFiles 5
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 includes_dir/CMakeFiles/first_executable.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/misha/dev/first-databaze/databaze/build/CMakeFiles 0
+.PHONY : includes_dir/CMakeFiles/first_executable.dir/rule
+
+# Convenience name for target.
+first_executable: includes_dir/CMakeFiles/first_executable.dir/rule
+.PHONY : first_executable
+
+# clean rule for target.
+includes_dir/CMakeFiles/first_executable.dir/clean:
+	$(MAKE) $(MAKESILENT) -f includes_dir/CMakeFiles/first_executable.dir/build.make includes_dir/CMakeFiles/first_executable.dir/clean
+.PHONY : includes_dir/CMakeFiles/first_executable.dir/clean
+
+#=============================================================================
+# Target rules for target includes_dir/CMakeFiles/second_executable.dir
+
+# All Build rule for target.
+includes_dir/CMakeFiles/second_executable.dir/all: includes_dir/CMakeFiles/includes.dir/all
+	$(MAKE) $(MAKESILENT) -f includes_dir/CMakeFiles/second_executable.dir/build.make includes_dir/CMakeFiles/second_executable.dir/depend
+	$(MAKE) $(MAKESILENT) -f includes_dir/CMakeFiles/second_executable.dir/build.make includes_dir/CMakeFiles/second_executable.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/misha/dev/first-databaze/databaze/build/CMakeFiles --progress-num=8,9 "Built target second_executable"
+.PHONY : includes_dir/CMakeFiles/second_executable.dir/all
+
+# Build rule for subdir invocation for target.
+includes_dir/CMakeFiles/second_executable.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/misha/dev/first-databaze/databaze/build/CMakeFiles 5
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 includes_dir/CMakeFiles/second_executable.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/misha/dev/first-databaze/databaze/build/CMakeFiles 0
+.PHONY : includes_dir/CMakeFiles/second_executable.dir/rule
+
+# Convenience name for target.
+second_executable: includes_dir/CMakeFiles/second_executable.dir/rule
+.PHONY : second_executable
+
+# clean rule for target.
+includes_dir/CMakeFiles/second_executable.dir/clean:
+	$(MAKE) $(MAKESILENT) -f includes_dir/CMakeFiles/second_executable.dir/build.make includes_dir/CMakeFiles/second_executable.dir/clean
+.PHONY : includes_dir/CMakeFiles/second_executable.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

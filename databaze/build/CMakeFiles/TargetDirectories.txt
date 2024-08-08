@@ -1,3 +1,8 @@
 /home/misha/dev/first-databaze/databaze/build/CMakeFiles/dz2_2sem.dir
 /home/misha/dev/first-databaze/databaze/build/CMakeFiles/edit_cache.dir
 /home/misha/dev/first-databaze/databaze/build/CMakeFiles/rebuild_cache.dir
+/home/misha/dev/first-databaze/databaze/build/includes_dir/CMakeFiles/includes.dir
+/home/misha/dev/first-databaze/databaze/build/includes_dir/CMakeFiles/first_executable.dir
+/home/misha/dev/first-databaze/databaze/build/includes_dir/CMakeFiles/second_executable.dir
+/home/misha/dev/first-databaze/databaze/build/includes_dir/CMakeFiles/edit_cache.dir
+/home/misha/dev/first-databaze/databaze/build/includes_dir/CMakeFiles/rebuild_cache.dir

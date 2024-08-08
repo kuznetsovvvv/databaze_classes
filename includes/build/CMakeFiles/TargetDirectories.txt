@@ -1,0 +1,5 @@
+/home/misha/dev/first-databaze/includes/build/CMakeFiles/includes.dir
+/home/misha/dev/first-databaze/includes/build/CMakeFiles/first_executable.dir
+/home/misha/dev/first-databaze/includes/build/CMakeFiles/second_executable.dir
+/home/misha/dev/first-databaze/includes/build/CMakeFiles/edit_cache.dir
+/home/misha/dev/first-databaze/includes/build/CMakeFiles/rebuild_cache.dir

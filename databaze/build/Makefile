@@ -129,6 +129,45 @@ dz2_2sem/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/dz2_2sem.dir/build.make CMakeFiles/dz2_2sem.dir/build
 .PHONY : dz2_2sem/fast
 
+#=============================================================================
+# Target rules for targets named includes
+
+# Build rule for target.
+includes: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 includes
+.PHONY : includes
+
+# fast build rule for target.
+includes/fast:
+	$(MAKE) $(MAKESILENT) -f includes_dir/CMakeFiles/includes.dir/build.make includes_dir/CMakeFiles/includes.dir/build
+.PHONY : includes/fast
+
+#=============================================================================
+# Target rules for targets named first_executable
+
+# Build rule for target.
+first_executable: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 first_executable
+.PHONY : first_executable
+
+# fast build rule for target.
+first_executable/fast:
+	$(MAKE) $(MAKESILENT) -f includes_dir/CMakeFiles/first_executable.dir/build.make includes_dir/CMakeFiles/first_executable.dir/build
+.PHONY : first_executable/fast
+
+#=============================================================================
+# Target rules for targets named second_executable
+
+# Build rule for target.
+second_executable: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 second_executable
+.PHONY : second_executable
+
+# fast build rule for target.
+second_executable/fast:
+	$(MAKE) $(MAKESILENT) -f includes_dir/CMakeFiles/second_executable.dir/build.make includes_dir/CMakeFiles/second_executable.dir/build
+.PHONY : second_executable/fast
+
 dz2_2sem.o: dz2_2sem.cpp.o
 .PHONY : dz2_2sem.o
 
@@ -153,54 +192,6 @@ dz2_2sem.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/dz2_2sem.dir/build.make CMakeFiles/dz2_2sem.dir/dz2_2sem.cpp.s
 .PHONY : dz2_2sem.cpp.s
 
-employees.o: employees.cpp.o
-.PHONY : employees.o
-
-# target to build an object file
-employees.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/dz2_2sem.dir/build.make CMakeFiles/dz2_2sem.dir/employees.cpp.o
-.PHONY : employees.cpp.o
-
-employees.i: employees.cpp.i
-.PHONY : employees.i
-
-# target to preprocess a source file
-employees.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/dz2_2sem.dir/build.make CMakeFiles/dz2_2sem.dir/employees.cpp.i
-.PHONY : employees.cpp.i
-
-employees.s: employees.cpp.s
-.PHONY : employees.s
-
-# target to generate assembly for a file
-employees.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/dz2_2sem.dir/build.make CMakeFiles/dz2_2sem.dir/employees.cpp.s
-.PHONY : employees.cpp.s
-
-structual_divisions.o: structual_divisions.cpp.o
-.PHONY : structual_divisions.o
-
-# target to build an object file
-structual_divisions.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/dz2_2sem.dir/build.make CMakeFiles/dz2_2sem.dir/structual_divisions.cpp.o
-.PHONY : structual_divisions.cpp.o
-
-structual_divisions.i: structual_divisions.cpp.i
-.PHONY : structual_divisions.i
-
-# target to preprocess a source file
-structual_divisions.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/dz2_2sem.dir/build.make CMakeFiles/dz2_2sem.dir/structual_divisions.cpp.i
-.PHONY : structual_divisions.cpp.i
-
-structual_divisions.s: structual_divisions.cpp.s
-.PHONY : structual_divisions.s
-
-# target to generate assembly for a file
-structual_divisions.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/dz2_2sem.dir/build.make CMakeFiles/dz2_2sem.dir/structual_divisions.cpp.s
-.PHONY : structual_divisions.cpp.s
-
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -210,15 +201,12 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... dz2_2sem"
+	@echo "... first_executable"
+	@echo "... includes"
+	@echo "... second_executable"
 	@echo "... dz2_2sem.o"
 	@echo "... dz2_2sem.i"
 	@echo "... dz2_2sem.s"
-	@echo "... employees.o"
-	@echo "... employees.i"
-	@echo "... employees.s"
-	@echo "... structual_divisions.o"
-	@echo "... structual_divisions.i"
-	@echo "... structual_divisions.s"
 .PHONY : help
 
 
