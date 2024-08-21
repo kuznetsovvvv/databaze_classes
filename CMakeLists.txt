@@ -1,0 +1,7 @@
+cmake_minimum_required(VERSION 3.10)
+project(data_baze)
+set(CMAKE_CXX_STANDARD 11)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
+include_directories(includes)
+set(GLOB SRC_SRC "databaze/data_base.cpp")
+add_executable(data_baze databaze/data_base.cpp)
