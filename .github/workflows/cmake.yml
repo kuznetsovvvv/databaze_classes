@@ -1,26 +1,19 @@
-name: CMake_Build
+name: CMake_build
 
 on:
   push:
-    branches: [ main ]
+    branches: [ "main" ]
   pull_request:
-    branches: [ main ]
-
-
-  workflow_dispatch:
+    branches: [ "main" ]
 
 jobs:
   build:
+
     runs-on: ubuntu-latest
-  
-    
+
     steps:
-    - name: checkout
-      uses: actions/checkout@v3
-    
-    - name: Build a databaze library gcc
+    - uses: actions/checkout@v4
+    - name: Build data_base
       run: |
-        cmake -H. -B_build -DCMAKE_C_COMPILER=gcc
-        cmake --build _build
-      shell: bash
-      working-directory: databaze
+        cmake -B build
+        cmake --build build
