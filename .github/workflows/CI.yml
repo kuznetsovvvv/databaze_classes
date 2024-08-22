@@ -16,7 +16,7 @@ jobs:
     - name: Install lcov
       run: sudo apt-get install -y lcov
 
-    - name: Run tests
+    - name: Run tests as root
       run: |
         ./tests/tests.cpp
         lcov --directory . --capture --output-file coverage.info
