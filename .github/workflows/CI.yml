@@ -15,7 +15,7 @@ jobs:
     
     - name: Tests
       run: |
-        build/test
+        build/check
 
     - name: Coveralls
       uses: coverallsapp/github-action@main
