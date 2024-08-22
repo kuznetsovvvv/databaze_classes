@@ -16,12 +16,6 @@ jobs:
     - name: Install lcov
       run: sudo apt-get install -y lcov
 
-    - name: Config with tests
-      run: cmake -H. -B ${{github.workspace}}/build -DBUILD_TESTS=ON -DCMAKE_CXX_FLAGS='--coverage'
-
-    - name: Build 
-      run: cmake --build ${{github.workspace}}/build
-
     - name: Run tests
       run: |
         build/check
