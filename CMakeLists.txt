@@ -12,7 +12,7 @@ endif()
 
 if(BUILD_TESTS)
   enable_testing()
-  add_subdirectory(third-party/gtest)
+  add_subdirectory(third-party)
   add_executable(test tests/tests.cpp)
   target_link_libraries(test includes gtest_main gmock_main)
 endif()
